@@ -1,0 +1,91 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Muthu Clinic</title>
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="{% url 'home-page' %}" alt="icon"> Sri Muthu Clinic</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link" aria-current="page" href="{% url 'home-page' %}"></i>Home</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'service-page' %}"></i>Services</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'book-page' %}"></i>Appointment Booking</a>  
+                  
+                  {% if request.user.is_authenticated %}
+                    <a class="nav-link" aria-current="page" href="{% url 'schedule-page' %}"></i>Appointment Schedule</a>
+                    <a class="nav-link" aria-current="page" href="#"><i class="fa fa-user"></i> {{request.user}}</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'logout-page' %}"><i class="fa fa-sign-out"></i> Logout</a>
+                  {% else %}
+                    <a class="nav-link" href="{% url 'login-page' %}"><i class="fa fa-sign-in"></i> Login</a>
+                    <a class="nav-link" href="{% url 'signup-page' %}"><i class="fa fa-users"></i> Register</a>
+                  {% endif %}
+                    
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section class="first">
+        <h1 style="padding-top:20px; font-weight: bold;">About Sri Muthu Clinic</h1>
+        <div class="dent">
+            <img src="{% static 'img/Dental Clinic.jpg'%}" alt="clinic">
+            <p>Welcome to Sri Muthu Clinic, where modern dentistry meets compassionate care. Our cutting-edge facility boasts advanced technology for precise diagnostics, same-day restorations, and enhanced safety measures. Our dedicated team ensures your comfort and oral health. Experience excellence in dentistry at Sri Muthu Clinic. Your smile, our priority..</p>
+        </div>
+        <div class="dent1">
+            <img src="{% static 'img/doctor.JPG'%}" alt="doctor">
+            <p>Greetings, I'm Dr. R.Vasanth Kumar, your caring dentist. With a devotion to enhancing your smile, I prioritize your oral health. Join us at our practice, where your comfort and well-being are our top priorities.</p>
+        </div>
+        <div class="dent2">
+            <img src="{% static 'img/certificate.jpg'%}">
+            <p>The International Implant Foundation proudly certifies my dental clinic's extensive experience in advanced implant procedures, reinforcing my dedication to maintaining the highest standards of excellence in dental care and demonstrating a commitment to ongoing innovation and patient well-being.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Sri Muthu Dental Clinic</p>
+                <p>Bus stop,101</p>
+                <p>Rajaji Street, Anna Vazhaivu</p>
+                <p>Karur, 639001</p>
+                <p>Phone: +91 93458 47414</p>
+                <p>Email: info@srimuthudentalclinic.com</p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <!-- <li><a href="#">Home</a></li> -->
+                    <li><a href="{% url 'home-page'%}">Home</a></li>
+                    <li><a href="{% url 'book-page'%}">Appointment</a></li>
+                    <li><a href="{% url 'service-page'%}">Service</a></li>
+                    <li><a href="{% url 'login-page'%}">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="{% static 'img/facebook-square-icon.png'%}" alt="Facebook"></a>
+                <a href="#"><img src="{% static 'img/whatsapp-square-icon.png'%}" alt="Whatsapp"></a>
+                <a href="#"><img src="{% static 'img/instagram-square-icon.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sri Muthu Dental Clinic. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

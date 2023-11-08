@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #c0dbe7;
+    height: 700px;
+}
+
+.icon{
+    display: flex;
+    /* position: sticky; */
+    /* top: 0px; */
+}
+
+.icon img{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.icon h3{
+    margin-top: 30px;
+    margin-left: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+}
+
+.icon span{
+    color: #0079FF;
+}
+
+.icon nav{
+    display:flex;
+}
+
+.icon .list{
+    display: flex;
+    margin-left: 800px;
+}
+
+.list li{
+    list-style: none;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.list li a{
+    text-decoration: none;
+    padding-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight:580;
+}
+
+.list li a:hover{
+    color: #0079FF;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.main .text h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.main .text p{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.main .text button{
+    background-color: #0079FF;
+    /* color: white; */
+    height: 45px; 
+    width: 200px;
+    font-size: 18px;
+    position: relative;
+    left: 300px;
+    top: 30px;
+    border-radius: 10px;
+    border: none;
+    transition: transform 1s;
+}
+
+.main .text button a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.main .text button:hover{
+    background-color:#068FFF;
+    transform: translateY(-5px);
+}
+
+
+
+/* .calc{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+
+.calc .pat{
+    margin-left: 20px;
+} */
+
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    height: 680px;
+    margin-bottom: 20px;
+    margin-left: 250px;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+}
+
+.first p{
+    font-family: 'Poppins', sans-serif;
+    color: #068FFF;
+    text-align: center;
+}
+
+.first h2{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.treats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 40px;
+    padding-top: 30px; 
+    justify-content: center;
+    flex-wrap: column;
+    align-items:center;
+}
+
+.pg{
+    background-color:#F0F0F0;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    /* padding-top: 30px; */
+    margin-bottom: 30px;
+}
+
+.pg img{
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+.pg p{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding-top: 20px;
+}
+
+.second{
+    height: 300px;
+    width: 1500px;
+    margin-top: 10px;
+    margin-left: 100px;
+    display: flex;
+    margin-bottom: 50px;
+
+}
+
+.second h2{
+    font-family: 'Poppins', sans-serif;
+    color: #068FFF;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size:32px;
+}
+
+.second p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    padding-top: 80px;
+}
+
+.second img{
+    width: 400px;
+    height: 300px;
+}
+
+footer {
+    background-color: #1c4ca4;
+    color: #fff;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social-media {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.quick-links li{
+    padding-top: 5px;
+    list-style: none;
+}
+
+.quick-links li a{
+    text-decoration: none;
+    color: #acb9ce;
+
+}
+
+.quick-links li a:hover{
+    text-decoration: underline;
+
+}
+
+.copyright{
+    text-align: center;
+}
+
+.social-media img{
+    /* padding-top: 1px; */
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+

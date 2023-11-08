@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Merriweather:ital,wght@1,900&family=Phudu:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Merriweather:ital,wght@1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(47, 143, 157);
+    position: sticky;
+    top:0px;
+    height: 80px;
+}
+
+nav{
+    /* margin: 0; */
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.icon h1{
+    font-family: 'Phudu', cursive;
+    font-weight: bolder;
+    color: #FFC6AC;
+    margin-left: 30px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.option{
+    margin-top: 30px;
+}
+
+.option a{
+    text-decoration: none;
+    margin-right: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.option a:hover{
+    color: #65647C;
+    background-color: rgba(130, 219, 216,0.2);
+    padding:10px 12px;
+    border-radius: 50px;
+}
+
+.icon{
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+
+.icon img{
+    height: 50px;
+}
+
+.box{
+    margin-left: 600px;
+    margin-top: 100px;
+    border: 2px solid gray;
+    width: 420px;
+    height: 1400px;
+    border-radius: 20px;
+    box-shadow: 5px 5px gray;
+    margin-bottom: 200px; 
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 700px;
+    width: 430px;
+    margin-left: 10px;
+}
+
+.personal h1{
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 20px;
+    /* text-align: center; */
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #A2678A;
+}
+
+.personal input{
+    width: 380px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:1px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+
+
+.personal select{
+    width: 400px;
+    height: 40px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.personal label{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #65647C;
+
+}
+
+.emer input{
+    width: 380px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:1px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.emer h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0A6EBD;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.emer label{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #65647C;
+
+}
+
+.ins label{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #65647C;
+
+}
+
+.ins h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0A6EBD;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ins input{
+    width: 380px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:1px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.but button{
+    height: 55px;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #176B87;
+    border: none;
+    transition: transform 1s;
+}
+
+.but button:hover{
+    transform: translateY(10px);
+    background-color: white;
+    border: 2px solid #176B87;
+    color: #176B87;
+}

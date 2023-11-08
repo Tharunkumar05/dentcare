@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Muthu Clinic</title>
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="{% url 'home-page' %}" alt="icon"> Sri Muthu Clinic</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link" aria-current="page" href="{% url 'home-page' %}"></i>Home</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'about-page' %}"></i>About</a>  
+                  <a class="nav-link" aria-current="page" href="{% url 'book-page' %}"></i>Appointment Booking</a>
+                  
+                {% if request.user.is_authenticated %}
+                    <a class="nav-link" aria-current="page" href="{% url 'schedule-page' %}"></i>Appointment Schedule</a>
+                    <a class="nav-link" aria-current="page" href="#"><i class="fa fa-user"></i> {{request.user}}</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'logout-page' %}"><i class="fa fa-sign-out"></i> Logout</a>
+                  {% else %}
+                    <a class="nav-link" href="{% url 'login-page' %}"><i class="fa fa-sign-in"></i> Login</a>
+                    <a class="nav-link" href="{% url 'signup-page' %}"><i class="fa fa-users"></i> Register</a>
+                  {% endif %}
+                    
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <section class="blog">
+        <h1 style="padding-top:50px; font-weight: 500; color: #4293f0;">Services Provided Here</h1>
+        <div class="dent">
+            <img src="{%static 'img/dental bondings.jpg'%}" alt="teeth">
+            <h3>Dental Bonding</h3>
+            <p>Dental bonding is a technique used to correct imperfections with your teeth to give you a better-looking smile. Bonding is used to repair chipped teeth, decayed teeth, and cracked teeth. Bonding involves applying a tooth-colored resin material to the teeth and hardening it with a light. This bonds the material to the teeth to improve a person's smile. </p>
+        </div>
+        <div class="dent">
+            <img src="{%static 'img/cosmetic fillings.jpg'%}" alt="teeth">
+            <h3>Cosmetic Fillings</h3>
+            <p>Cosmetic fillings, or tooth- colored fillings, are made of composite resin and glass particles. They are cemented onto the existing teeth using a bonding agent. Cosmetic fillings can improve the appearance of your smile. Unlike silver-colored fillings, cosmetic fillings look just like your natural teeth.  </p>
+        </div>
+        <div class="dent">
+            <img src="{%static 'img/teeth cleaning.jpg'%}" alt="teeth">
+            <h3>Teeth Cleaning</h3>
+            <p>You should visit the dentist every six months for teeth cleanings. Tartar is a hard buildup of plaque that forms on the teeth. Tartar forms below and above the gum line. The only way to remove tartar is to see a dentist for a professional teeth cleaning. Regular teeth cleanings are important to maintaining healthy teeth and gums. </p>
+        </div>
+        <div class="dent">
+            <img src="{%static 'img/rootservice.jpg'%}" alt="teeth">
+            <h3>Root Canal Therapy</h3>
+            <p>In the past, diseased teeth often had to be extracted. Today, they often can be saved through root canal therapy. A root canal is a dental procedure that is used to repair teeth that are infected or badly decayed. Some people fear root canal treatments because they assume they are painful. Most people report that the procedure is no more painful than having a filling placed. </p>
+        </div>
+        <div class="dent">
+            <img src="{%static 'img/dental bridge.jpg'%}" alt="teeth">
+            <h3>Bridgework</h3>
+            <p> A dental bridge is a structure between two dental crowns to fill the gap between missing teeth. A bridge can be supported by your teeth, implants, or a combination of teeth and implants. A dental bridge can restore your smile, improve your appearance, and take years off your look.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Sri Muthu Dental Clinic</p>
+                <p>Bus stop,101</p>
+                <p>Rajaji Street, Anna Vazhaivu</p>
+                <p>Karur, 639001</p>
+                <p>Phone: +91 93458 47414</p>
+                <p>Email: info@srimuthudentalclinic.com</p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <!-- <li><a href="#">Home</a></li> -->
+                    <li><a href="{% url "home-page"%}">Home</a></li>
+                    <li><a href="{% url "about-page"%}">About</a></li>
+                    <li><a href="{% url "book-page"%}">Appointment</a></li>
+                    <li><a href="{% url "login-page"%}">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="{%static 'img/facebook-square-icon.png'%}" alt="Facebook"></a>
+                <a href="#"><img src="{%static 'img/whatsapp-square-icon.png'%}" alt="Whatsapp"></a>
+                <a href="#"><img src="{%static 'img/instagram-square-icon.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Dental Clinic. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
